@@ -3,15 +3,14 @@ RT-11
 enable
 configure terminal
 hostname RT-11
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
 security passwords min-length 8
 login block-for 180 attempts 3 within 60
-username Danieljesus privilege 15 secret Senhafilipe 
-username Filipemondoni privilege 15 secret Senhafilipe
-username Ian privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -81,15 +80,14 @@ RT-21
 enable
 configure terminal
 hostname RT-21
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
 security passwords min-length 8
 login block-for 180 attempts 3 within 60
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username Ian privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -157,15 +155,14 @@ RT-31
 enable
 configure terminal
 hostname RT-31
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
 security passwords min-length 8
 login block-for 180 attempts 3 within 60
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username Ian privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
