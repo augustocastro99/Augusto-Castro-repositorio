@@ -1,47 +1,335 @@
-enable
+SW-11
+
+enable 
 configure terminal
-hostname SW-1
-banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!!!"
+hostname SW-11
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
 enable secret SenhadaEnable
-line console 0
-password SenhadaConsole
-login
-exit
-ip domain-name rede1.local
-login block-for 240 attempts 7 within 600
-security passwords min-length 8
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username IanSimim privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
-line vty 0 15
-password SenhadaVTY
+line console 0
 login local
+exec-timeout 10
+line vty 0 15
 transport input ssh
-exec-timeout 5
+login local
+exec-timeout 10
 exit
-username Brunao privilege 15 secret Batata
-username Isa privilege 15 secret Batata
-username Marcos privilege 15 secret Batata
-usernama Daniel privilege 15 secret Batata
 service password-encryption
+ip default-gateway 172.16.1.129
 vlan 10
 name VLAN10
 vlan 20
 name VLAN20
-exit
-interface f0/1
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
 switchport mode access
 switchport access vlan 10
-no shutdown
-interface f0/2
+description PC-11
+interface fastEthernet 0/2
 switchport mode access
 switchport access vlan 20
-no shutdown
-interface vlan 100
-ip address 172.168.1.141 255.255.255.240
-description VLAN100
-interface g0/1
+description PC-12
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
 switchport mode trunk
 switchport trunk native vlan 99
 switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.1.10 255.255.255.128
+interface vlan 20
+ip address 172.16.0.10 255.255.255.0
+interface vlan 100
+ip address 172.16.1.133 255.255.255.240
 no shutdown
+do wr
+-------------------------------------------------------------------
+SW-12
+
+enable 
+configure terminal
+hostname SW-12
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+enable secret SenhadaEnable
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username IanSimim privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line console 0
+login local
+exec-timeout 10
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+exit
+service password-encryption
 ip default-gateway 172.16.1.129
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
+switchport mode access
+switchport access vlan 10
+description PC-13
+interface fastEthernet 0/2
+switchport mode access
+switchport access vlan 20
+description PC-14
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.1.11 255.255.255.128
+interface vlan 20
+ip address 172.16.0.11 255.255.255.0
+interface vlan 100
+ip address 172.16.1.133 255.255.255.240
+no shutdown
+do wr
+-------------------------------------------------------------------
+SW-21
+
+enable 
+configure terminal
+hostname SW-21
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+enable secret SenhadaEnable
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username IanSimim privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line console 0
+login local
+exec-timeout 10
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+exit
+service password-encryption
+ip default-gateway 172.16.3.1
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
+switchport mode access
+switchport access vlan 10
+description PC-21
+interface fastEthernet 0/2
+switchport mode access
+switchport access vlan 20
+description PC-22
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.2.138 255.255.255.128
+interface vlan 20
+ip address 172.16.2.10 255.255.255.128
+interface vlan 100
+ip address 172.16.3.5 255.255.255.224
+no shutdown
+do wr
+-------------------------------------------------------------------
+SW-22
+
+enable
+configure terminal
+hostname SW-22
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+enable secret SenhadaEnable
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username Ian privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line console 0
+login local
+exec-timeout 10
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+exit
+service password-encryption
+ip default-gateway 172.16.3.1
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
+switchport mode access
+switchport access vlan 10
+description PC-23
+interface fastEthernet 0/2
+switchport mode access
+switchport access vlan 20
+description PC-24
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.2.139 255.255.255.128
+interface vlan 20
+ip address 172.16.2.11 255.255.255.128
+interface vlan 100
+ip address 172.16.3.5 255.255.255.224
+no shutdown
+do wr
+-------------------------------------------------------------------
+SW-31
+
+enable 
+configure terminal
+hostname SW-31
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+enable secret SenhadaEnable
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username IanSimim privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line console 0
+login local
+exec-timeout 10
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+exit
+service password-encryption
+ip default-gateway 172.16.4.193
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
+switchport mode access
+switchport access vlan 10
+description PC-31
+interface fastEthernet 0/2
+switchport mode access
+switchport access vlan 20
+description PC-32
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.4.138 255.255.255.192
+interface vlan 20
+ip address 172.16.4.10 255.255.255.128
+interface vlan 100
+ip address 172.16.4.197 255.255.255.224
+no shutdown
+do wr
+-------------------------------------------------------------------
+SW-32
+
+enable 
+configure terminal
+hostname SW-32
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"
+enable secret SenhadaEnable
+username Danieljesus privilege 15 secret Senhafilipe
+username Filipemondoni privilege 15 secret Senhafilipe
+username Ian privilege 15 secret Senhafilipe
+username Melissareis privilege 15 secret Senhafilipe
+username Renanaraujo privilege 15 secret Senhafilipe
+ip domain-name peachanddaisy.local
+crypto key generate rsa general-keys modulus 1024
+line console 0
+login local
+exec-timeout 10
+line vty 0 15
+transport input ssh
+login local
+exec-timeout 10
+exit
+service password-encryption
+ip default-gateway 172.16.4.193
+vlan 10
+name VLAN10
+vlan 20
+name VLAN20
+vlan 100
+name GERENCIAMENTO
+interface fastEthernet 0/1
+switchport mode access
+switchport access vlan 10
+description PC-33
+interface fastEthernet 0/2
+switchport mode access
+switchport access vlan 20
+description PC-34
+interface fastEthernet 0/24
+switchport mode access
+switchport access vlan 100
+description SRV
+interface gigabitEthernet 0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,99,100
+description TRUNK ROUTER
+interface vlan 10
+ip address 172.16.4.139 255.255.255.192
+interface vlan 20
+ip address 172.16.4.11 255.255.255.128
+interface vlan 100
+ip address 172.16.4.197 255.255.255.224
+no shutdown
 do wr
