@@ -3,13 +3,12 @@ SW-11
 enable 
 configure terminal
 hostname SW-11
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username IanSimim privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -59,13 +58,12 @@ SW-12
 enable 
 configure terminal
 hostname SW-12
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username IanSimim privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -115,13 +113,12 @@ SW-21
 enable 
 configure terminal
 hostname SW-21
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username IanSimim privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -171,13 +168,12 @@ SW-22
 enable
 configure terminal
 hostname SW-22
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username Ian privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -227,13 +223,12 @@ SW-31
 enable 
 configure terminal
 hostname SW-31
-banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE TI"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username IanSimim privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
@@ -283,13 +278,12 @@ SW-32
 enable 
 configure terminal
 hostname SW-32
-banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS"
+banner motd "ACESSO APENAS PARA O DEPARTAMENTO DE REDES"
 enable secret SenhadaEnable
-username Danieljesus privilege 15 secret Senhafilipe
-username Filipemondoni privilege 15 secret Senhafilipe
-username Ian privilege 15 secret Senhafilipe
-username Melissareis privilege 15 secret Senhafilipe
-username Renanaraujo privilege 15 secret Senhafilipe
+username Augustocastro privilege 15 secret augustocastro
+username Yohan privilege 15 secret yohanoliveira
+username Lucas privilege 15 secret lucaspessolato
+username Kaiky privilege 15 secret ted16m12
 ip domain-name peachanddaisy.local
 crypto key generate rsa general-keys modulus 1024
 line console 0
